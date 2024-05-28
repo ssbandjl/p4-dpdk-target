@@ -1,0 +1,43 @@
+
+
+unit-test/CMakeLists.txt
+
+
+MOCK_GLOBAL_FUNC2
+MOCK_GLOBAL_FUNC1(mempool_find, struct mempool *(const char *name));
+
+
+
+lld_dpdk_port_add
+    switch (port_attrib->port_type)
+    case BF_DPDK_TAP:
+        lld_dpdk_tap_port_add
+    case BF_DPDK_LINK:
+        lld_dpdk_link_port_add
+    case BF_DPDK_SOURCE:
+        lld_dpdk_source_port_add
+    case BF_DPDK_SINK:
+        lld_dpdk_sink_port_add
+    case BF_DPDK_RING:
+        lld_dpdk_ring_port_add
+
+link_create(const char *name, struct link_params *params)
+    rte_eal_hotplug_add
+    rte_eth_dev_get_port_by_name
+    rte_eth_dev_is_valid_port
+    mempool_find
+    rte_eth_dev_socket_id
+    rte_eth_dev_configure
+    rte_eth_promiscuous_enable
+    rte_eth_rx_queue_setup
+    rte_eth_tx_queue_setup
+    rte_eth_dev_start
+    rss_setup
+    rte_eth_dev_set_link_up
+    rte_eth_dev_get_name_by_port
+    TAILQ_INSERT_TAIL(&obj->link_list, link, node)
+
+
+
+
+
